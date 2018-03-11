@@ -1,0 +1,9 @@
+#!/bin/bash -x
+
+# read date
+date=$(date)
+
+topic=$1
+read -p "Enter : " val
+
+echo -e "$val \ncreated at $date" >> ~/Desktop/shell-script/${topic}notes.txt

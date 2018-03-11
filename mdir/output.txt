@@ -1,0 +1,14 @@
+and.sh
+case.sh
+char-count.sh
+file-test.sh
+func.sh
+if-else.sh
+mdir
+README.md
+read.sh
+test
+testfile.txt
+uinfo.sh
+until.sh
+while.sh
