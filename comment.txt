@@ -1,0 +1,4 @@
+if [[ ! $# -eq 1 ]]; then
+  echo # "invalid arguments!!!"
+  exit 1
+ fi

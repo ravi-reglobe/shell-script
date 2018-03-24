@@ -1,0 +1,22 @@
+#!/bin/bash
+
+if [[ ! $1 ]]; then
+ echo "First argument is missing"
+ exit 1
+fi
+
+found=""
+while read -r; do
+ if [[ ! $found ]]; then
+  if [[ $REPLY =~ $1 ]]; then
+   found="yes"
+  else
+   continue
+  fi
+ fi
+
+ echo "$REPLY"
+ #printf "%s\n" "$REPLY"
+done
+
+exit 0

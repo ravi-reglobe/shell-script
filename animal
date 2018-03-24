@@ -1,0 +1,21 @@
+#!/bin/bash
+
+case $1 in
+ cat)
+  echo "meow"
+ ;;
+ dog)
+  echo "woof"
+ ;;
+ cow)
+  echo "mooo"
+ ;;
+ ?)
+  echo "invalid animal"
+ ;;
+ *)
+  echo "Unknown animal"
+ ;;
+esac
+
+exit 0

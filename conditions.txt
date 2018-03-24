@@ -1,0 +1,15 @@
+#!/bin/bash
+read -p "Please Enter a word " name
+if [ -z "$name" ];
+  then
+    echo "String is empty"
+  else
+    echo "string length ${#name}"
+fi
+
+if [ -n "$name" ];
+  then
+    echo "not null string"
+  else
+    echo "null string"
+fi

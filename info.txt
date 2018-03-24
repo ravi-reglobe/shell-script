@@ -1,0 +1,18 @@
+-x to debug bash script 
+$# = number of arguments in command
+${#var} = number of character in var
+elif = else if
+${#1} = length of first argument
+
+Echo 
+ -n suppresses the newline
+ -e escape sequances
+
+printf
+ printf "hello %s" Ravi
+ http://wiki.bash-hackers.org/commands/builtin/printf
+ -v to assign value to variable
+
+read
+ IFS input file separator 
+

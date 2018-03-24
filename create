@@ -1,0 +1,27 @@
+#!/bin/bash
+
+name="$1"
+
+dirname="bin/"
+filename="${dirname}/${name}"
+
+if [[ ! "${name}" ]]; then
+ echo "invalid argument"
+ exit 1
+fi
+
+if type "${name}"; then
+ echo "script with given name is exist ${name}"
+ exit 1
+fi
+
+if [[ ! -d "${dirname}" ]]; then
+ if mkdir "${dirname}"; then
+  echo "created directory ${dirname}"
+ else
+  echo "not created!!!"
+  exit 1 
+ fi
+fi
+
+echo "end of script"
