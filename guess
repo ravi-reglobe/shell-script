@@ -1,0 +1,26 @@
+#!/bin/bash
+
+#this is a guess game
+
+declare -i guess=0
+
+# -r means readonly variable
+declare -ir target=$(( ($RANDOM % 100) +1 ))
+#echo "targeted num is = ${target}"
+
+declare -i count=0;
+until (( target == guess )); do
+ read -p "Guess a number(1-100) " guess
+ (( ++count ))
+ (( guess )) || continue
+ 
+ if (( target > guess )); then
+  echo "Lower!"
+ elif (( target < guess )); then
+  echo "Higher!"
+ else
+  echo "You Got it in ${count} count"
+ fi
+done
+
+exit 0

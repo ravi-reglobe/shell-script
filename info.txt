@@ -4,15 +4,18 @@ ${#var} = number of character in var
 elif = else if
 ${#1} = length of first argument
 
-Echo 
- -n suppresses the newline
- -e escape sequances
+Array
+ stored
+  x[0]="Some"
+  x[1]="word"
+ retrive
+  ${x[0]} : some
+  ${x[@]} or ${x[*]}
+ declare -a x
+ initialize
+  ar=(1 2 3 t g)
+ lenght
+  ${#arr[@]}
 
-printf
- printf "hello %s" Ravi
- http://wiki.bash-hackers.org/commands/builtin/printf
- -v to assign value to variable
-
-read
- IFS input file separator 
-
+Background and nohup
+ nohup nice myscript &

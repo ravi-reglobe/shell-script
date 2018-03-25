@@ -1,0 +1,16 @@
+#!/bin/bash
+
+#error() {
+# echo "$1"
+# exit "$2"
+#}
+
+source util
+
+[[ $# -ne 2 ]] && error "Invalid arguments" 1
+
+for i in *$1; do
+ echo mv $i ${i/%$1/$2}
+done
+
+exit 0
