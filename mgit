@@ -1,0 +1,16 @@
+#!/bin/bash
+
+error (){
+ echo "$1"
+ exit "$2"
+}
+
+[[ $1 ]] || error 'Please provide script' 1
+
+script="git $*";
+until `echo ${script}`; do
+ echo "$?"
+ sleep 2
+done
+
+exit 0
